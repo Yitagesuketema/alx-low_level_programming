@@ -1,6 +1,7 @@
 /*
  * @Author :Yitagesu Ketema
- * */
+ *
+ */
 #include <stdio.h>
 /**
  *  main - entry point of our programme
