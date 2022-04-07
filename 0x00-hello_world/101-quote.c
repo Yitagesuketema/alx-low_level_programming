@@ -1,14 +1,19 @@
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-/
-main - main block
-  Return: 1
-   /
-  int main(void)
-{
-		int s= strlen("and that piece of art is useful - Dora Korpar, 2015-10-19\n");
+/*
+ * File: 101-quote.c
+ * Auth: Yitagesu K Areda
+ */
 
-			write(2, "and that piece of art is useful - Dora Korpar, 2015-10-19\n",s);
-				return (1);
+#include <unistd.h>
+/**
+ * main - Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
+ * followed by a new line, to standard error.   
+ *  Return: Always 1.
+ */
+int main(void)
+{
+		write(2,
+					      "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
+					      	      59);
+
+			return (1);
 }
