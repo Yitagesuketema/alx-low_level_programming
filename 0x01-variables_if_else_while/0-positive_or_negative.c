@@ -1,3 +1,7 @@
+/*
+ * File: 0-positive_or_negative.c
+ * Auth: Yitagesu K Areda
+ */
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
