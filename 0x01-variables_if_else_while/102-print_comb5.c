@@ -1,6 +1,6 @@
 /*
  * File: 102-print_comb5.c
- * Auth: Yitagesu Ketema Areda
+ * Auth: Yitagesu K Areda
  */
 
 #include <stdio.h>
