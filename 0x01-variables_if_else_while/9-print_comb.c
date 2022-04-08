@@ -2,9 +2,7 @@
  * File: 9-print_comb.c
  * Auth: Yitagesu K Areda
  */
-
 #include <stdio.h>
-
 /**
  * main - Prints all possible combinations of single-digit numbers.
  *
