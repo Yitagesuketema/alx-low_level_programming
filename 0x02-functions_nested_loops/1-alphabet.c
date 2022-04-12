@@ -3,21 +3,20 @@
  * Auth : Yitagesu K Areda
  */
 #include "main.c"
-/*
- *
- *
+/**
+ * print_alphabet - a function that prints the alphabet, in lowercase, followed by a new line.
+ * Return : void.
  */
-int main(void)
-	{
 void print_alphabet(void)
-	{
-	char c='a';
+{
+	char c = 'a';
+	
 	do
 	{
-	_putchar('c');
-	c++;
+		_putchar('c');
+		c++;
 	}
-	while(c <='z');
+	while(c <= 'z');
 	_putchar('\n');
-	}
-	}
+}
+	
