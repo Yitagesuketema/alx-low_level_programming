@@ -7,7 +7,6 @@
 void print_alphabet(void)
 {
 	char c='a'; 
-	
 	do
 	{
 	_putchar(c);
