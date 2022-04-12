@@ -4,8 +4,8 @@
 */
 #include "main.h"
 /*
-* main - Writes _putchar followed by a new line
-* Return : 0
+* main - prints the string  "_putchar" from a character array followed by a new line.
+* Return : 0.
 */
 int main(void)
 {
