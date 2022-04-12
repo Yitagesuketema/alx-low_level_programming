@@ -2,7 +2,6 @@
  * File : 1-alphabet.c
  * Auth : Yitagesu K Areda
  */
-#include "main.c"
 /**
  * print_alphabet - a function that prints the alphabet, in lowercase, followed by a new line.
  * Return : void.
