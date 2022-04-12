@@ -1,7 +1,3 @@
-/*
- *File : 1-alphabet.c
- * Auth : Yitagesu K Areda
- */
 #include "main.h"
 /*
  * print_alphabet - a function that prints the alphabet, in lowercase, followed by a new line.
@@ -15,6 +11,7 @@ void print_alphabet(void)
 	{
 	_putchar(c);
 	c++;
+	
 	}
 	while(c <= 'z');
  	_putchar('\n');
