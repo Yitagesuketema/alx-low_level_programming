@@ -5,10 +5,10 @@
  * followed by a new line.
  * Return : void .
  */
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 	char c[] = "abcdefghij";
-	int i=0;
+	int i = 0;
 	
 	while (i <= 9)
 	{
