@@ -4,16 +4,15 @@
  * followed by a new line.
  * Return : void.
  */
- void print_alphabet(void)
- {
+void print_alphabet(void)
+{
 	char c='a'; 
 	
 	do
 	{
 	_putchar(c);
 	c++;
-	
 	}
 	while (c <= 'z');
- 	_putchar('\n');
- }
+	_putchar('\n');
+}
