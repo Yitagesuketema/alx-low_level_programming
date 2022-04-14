@@ -4,16 +4,24 @@
  * @size:number of # to print
  * Return:void
  */
+
 void print_square(int size)
 {
-			if (size <= 0)
-				_putchar('\n');
-			else
+	int x, y;
+
+	if (size > 0)
+	{
+		for (x = 0; x < size; x++)
+		{
+			for (y = 0; y < size; y++)
 			{
-			for (i = 1; i <= size; i++)
-					{
-				_putchar('#');
-					}
+				_putchar(35);
 			}
-		_putchar('\n');
+			_putchar(10);
+		}
+	}
+	else
+	{
+		_putchar(10);
+	}
 }
