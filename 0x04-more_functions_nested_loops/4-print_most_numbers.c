@@ -1,7 +1,9 @@
-include "main.h"
+#include "main.h"
+
 /**
  * print_most_numbers - prints the numbers without 2 and 4
  */
+
 void print_most_numbers(void)
 {
 	int x;
