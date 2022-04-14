@@ -5,7 +5,7 @@
  */
 void print_numbers(void)
 {
-iint x;
+int x;
 
 	for (x = 48; x < 58; x++)
 	{
