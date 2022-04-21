@@ -1,31 +1,17 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- *print_number - print a number using _putchar.
- *@n: the number to be printed.
+ * main -program prints a[2] = 98
+ * Return: Void
  */
-
-void print_number(int n)
+int main(void)
 {
-	unsigned int i = 1;
+int n;
+int a[5];
+int *p;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n *= -1;
-	}
-	if (n == 0)
-		_putchar('0');
-	else
-	{
-		while ((n / i) >= 10)
-			i *= 10;
-
-		while (i > 0)
-		{
-			_putchar((n / i) + '0');
-			n %= i;
-			i /= 10;
-		}
-	}
+a[2] = 1024;
+p = &n;
+*(p + 5) = 98;
+printf("a[2] = %d\n", a[2]);
+return (0);
 }
