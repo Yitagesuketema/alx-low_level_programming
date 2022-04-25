@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strchr -locate the first occurence of character c
  * @s:a string to be searched
@@ -14,6 +13,6 @@ while (*s != '\0')
 if (*(s + i) == c)
 return (s + i);
 else
-return (NULL);
+return ('\0');
 }
 }
