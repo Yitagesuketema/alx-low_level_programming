@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _memcpy- copies memory area
  * @dest: your name (you@domain.com)
