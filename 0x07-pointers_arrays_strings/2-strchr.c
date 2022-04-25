@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strchr -locate the first occurence of character c
  * @s:a string to be searched
@@ -16,7 +17,7 @@ break;
 return (s + i);
 }
 i++;
-return ('\0');
+return (NULL);
 }
 }
 
