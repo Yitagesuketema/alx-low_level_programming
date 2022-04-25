@@ -5,8 +5,7 @@
  * @c: character to find
  * Return: pointer to first occurence of c character
  */
-char *_strchr(char *s,
- char c)
+char *_strchr(char *s, char c)
 {
 	unsigned int i;
 
@@ -15,3 +14,4 @@ char *_strchr(char *s,
 			break;
 	return (s[i] == c ? (s + i) : '\0');
 }
+
