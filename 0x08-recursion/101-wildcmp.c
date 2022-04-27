@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * wildcmp - compare two strings with possible wildcards
- * @s1: string
- * @s2: string
+ * @s1: first string
+ * @s2: second string
  * Return:int 0 or 1
  */
 int wildcmp(char *s1, char *s2)
