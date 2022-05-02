@@ -13,11 +13,11 @@ char *str_copy;
 if (str == NULL)
 return (NULL);
 
-while (*str)
+while (*str != '\0')
 {
 len++;
 }
-str_copy = malloc(sizeof(char) * (len + 1));
+str_copy = (char*)malloc(sizeof(char) * (len + 1));
 if (str_copy == NULL)
 return (NULL);
 i = 0;
