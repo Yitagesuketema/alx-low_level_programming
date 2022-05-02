@@ -13,7 +13,7 @@ char *str_copy;
 if (str == NULL)
 return (NULL);
 
-while (*str != '\0')
+while (*str != NULL')
 {
 len++;
 }
