@@ -20,6 +20,7 @@ char *create_array(unsigned int size, char c)
     do
     {
         str[index] = c;
+        index++;
     } while (index < size);
     return (*str);
 }
