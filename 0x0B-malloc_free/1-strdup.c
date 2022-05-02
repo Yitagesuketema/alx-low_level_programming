@@ -1,30 +1,30 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * _strdup -
- * @str:your name (you@domain.com)
- * Return:
+ * _strdup -  a function that returns a pointer to a newly allocated space in memory.
+ * @str:pointer string to be copied.
+ * Return: null if memory not allocatted 
+ * otherewise returned memory allocated in bytes 
  */
 char *_strdup(char *str)
 {
 unsigned int len = 0, i ,j;
-
-char *str_mem_copy;
-if (str_mem_copy == NULL)
+char *str_copy;
+if (str == NULL)
 return (NULL);
 
 while (*str != '\0')
 {
 len++;
 }
-str_mem_copy = (char *)malloc(sizeof(char) * len);
-if (str_mem_copy == NULL)
+str_copy = (char *)malloc(sizeof(char) * len);
+if (str_copy == NULL)
 return NULL;
 i = 0;
 for (j = 0; j < len; j++)
 {
-str_mem_copy[j] = str[i];
+str_copy[j] = str[i];
 i++;
 }
-return (str_mem_copy);
+return (str_copy);
 }
