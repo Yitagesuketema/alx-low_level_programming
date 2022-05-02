@@ -13,7 +13,7 @@ char *str_copy;
 if (str == NULL)
 return (NULL);
 
-while (*str != NULL)
+while (*str != '\0')
 {
 len++;
 }
@@ -21,10 +21,12 @@ str_copy = malloc(sizeof(char) * len);
 if (str_copy == NULL)
 return (NULL);
 i = 0;
-for (j = 0; j < len; j++)
+j = 0;
+while (j < len)
 {
 str_copy[j] = str[i];
 i++;
+j++;
 }
 return (str_copy);
 }
