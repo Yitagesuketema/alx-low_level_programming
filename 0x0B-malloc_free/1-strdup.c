@@ -18,6 +18,8 @@ while (*str != '\0')
 len++;
 }
 str_mem_copy = (char *)malloc(sizeof(char) * len);
+if (str_mem_copy == NULL)
+return NULL;
 i = 0;
 for (j = 0; j < len; j++)
 {
