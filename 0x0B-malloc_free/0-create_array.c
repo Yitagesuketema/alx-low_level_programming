@@ -11,18 +11,15 @@ char *create_array(unsigned int size, char c)
     unsigned int index;
     char *str;
     if (size == 0)
-    {
         return (NULL);
-    }
+
     str = (char *)malloc(sizeof(c) * size);
-    if (*str != NULL)
-    {
-        index = 0;
-        do
-        {
-            str[index] = c;
-        } while (index < size);
-        return (*str);
-    }
+    if (*str == NULL)
         return (NULL);
+    index = 0;
+    do
+    {
+        str[index] = c;
+    } while (index < size);
+    return (*str);
 }
