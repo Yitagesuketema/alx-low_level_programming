@@ -7,18 +7,22 @@
  */
 char *create_array(unsigned int size, char c)
 {
-if (size == 0)
-{
-return (NULL);
-}
-else
-{
-char *str = (char *)calloc(size, sizeof(c));
-if (*str)
-{
-*str = "A";
-return (*str);
-}
-else
-return (NULL);
+    unsigned int index;
+    char *str;
+    if (size == 0)
+    {
+        return (NULL);
+    }
+    str = (char *)calloc(size, sizeof(c));
+    if (*str)
+    {
+        index = 0;
+        do
+        {
+            str[index] = c;
+        } while (index < size);
+        return (*str);
+    }
+    else
+        return (NULL);
 }
