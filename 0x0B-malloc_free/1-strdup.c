@@ -8,7 +8,7 @@
  */
 char *_strdup(char *str)
 {
-unsigned int len = 0, i, j;
+unsigned int len = 0, i;
 char *str_copy;
 if (str == NULL)
 return (NULL);
