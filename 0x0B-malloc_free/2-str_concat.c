@@ -27,7 +27,7 @@ i = 0;
 for (i = 0; i < len_1; i++)
 *(str_concat + i) = *(s1 + i);
 
-for (j = len_1; j <= (total_len -1) ; j++)
+for (j = len_1; j < (total_len -1) ; j++)
 *(str_concat + j) = *(s2 + j);
 
 *(str_concat + total_len) = '\0';
