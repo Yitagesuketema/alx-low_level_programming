@@ -17,17 +17,14 @@ while (*str != '\0')
 {
 len++;
 }
-str_copy = (char*)malloc(sizeof(char) * (len + 1));
+str_copy = (char*)malloc(sizeof(char) * (len));
 if (str_copy == NULL)
 return (NULL);
 i = 0;
-j = 0;
-while (j < len)
+while (i < len)
 {
-str_copy[j] = str[i];
+str_copy[i] = str[i];
 i++;
-j++;
 }
-str_copy[len] = '\0';
 return (str_copy);
 }
