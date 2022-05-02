@@ -24,6 +24,5 @@ char *create_array(unsigned int size, char c)
         } while (index < size);
         return (*str);
     }
-    else
         return (NULL);
 }
