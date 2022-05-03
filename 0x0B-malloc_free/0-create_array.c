@@ -14,7 +14,7 @@ unsigned int index;
 if (size == 0)
 return (NULL);
 
-str =(char*)malloc(sizeof(char) * size);
+str = (char *)malloc(sizeof(char) * size);
 
 if (str == NULL)
 return (NULL);
