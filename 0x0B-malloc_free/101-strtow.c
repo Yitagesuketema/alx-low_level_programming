@@ -1,101 +1,98 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 /**
- * wordcount - get word count from string
- *             without spaces
- *
- * @str: string to count words present
- *
- * Return: The number of words
-*/
-
-int wordcount(char *str)
+ * strncat_mod - concatenates string with n bytes from another string
+ * @dest: destination string
+ * @src: source string
+ * @i: index of beginning char from source string to copy
+ * @str_len: string length
+ * Return: next index to check of source string
+ */
+int strncat_mod(char *dest, char *src, int i, int str_len)
 {
-	int words = 0;
+	int j;
 
-	while (*str != '\0')
+	for (j = 0; src[i] != ' ' && i < str_len; i++, j++)
+		dest[j] = src[i];
+	return (i);
+}
+/**
+ * mallocmem - allocates memory for output array and sets NULL at string end
+ * @newstr: new string
+ * @str: input string
+ * @str_len: string length
+ * Return: void
+ */
+void mallocmem(char **newstr, char *str, int str_len)
+{
+	int i = 0, j = 0, word_len = 1;
+
+	while (i < str_len)
 	{
-		/*skip spaces*/
-		if (*str == ' ')
-			str++;
-		else
+		if (str[i] != ' ')
 		{
-			/*count words*/
-			while (*str != ' ' && *str != '\0')
-				str++;
+			while (str[i] != ' ' && i < str_len)
+				i++, word_len++;
+			newstr[j] = malloc(sizeof(char) * word_len);
+			newstr[j][word_len] = '\0';
+			j++, word_len = 1;
+		}
+		i++;
+	}
+}
+/**
+ * word_count - counts words in input string
+ * @str: input string
+ * @str_len: string length
+ * Return: 0 on failure, words on success
+ */
+int word_count(char *str, int str_len)
+{
+	int i = 0, words = 0;
+
+	while (i < str_len)
+	{
+		if (str[i] != ' ')
+		{
+			while (str[i] != ' ' && i < str_len)
+				i++;
 			words++;
 		}
+		i++;
 	}
+	if (words == 0)
+		return (0);
 	return (words);
 }
-
 /**
- * free_array - free arr[i]
- *
- * @ar: array to free
- * @i: array[i]
- *
- * Return: nothing
-*/
-
-void free_array(char **ar, int i)
-{
-	if (ar != NULL && i != 0)
-	{
-		while (i >= 0)
-		{
-			free(ar[i]);
-			i--;
-		}
-		free(ar);
-	}
-}
-
-/**
- * strtow - split a string to words
- *
- * @str: string to split.
- *
- * Return: NULL if it fails
-*/
-
+ * strtow - splits a string into words
+ * @str: input string to split
+ * Return: pointer to new string
+ */
 char **strtow(char *str)
 {
-	int i, s, j, str_l, word;
-	char **string;
+	char **newstr;
+	int i = 0, j = 0, str_len = 0, words;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
-
-	str_l = wordcount(str);
-	/*return null if str_l == 0 || new == NULL*/
-	string = malloc((str_l + 1) * sizeof(char *));
-	if (str_l == 0 || string == NULL)
+	while (*(str + str_len) != '\0')
+		str_len++;
+	words = word_count(str, str_len);
+	if (!words)
 		return (NULL);
-
-	for (i = s = 0; i < str_l; i++)
+	newstr = malloc((words + 1) * sizeof(char *));
+	mallocmem(newstr, str, str_len);
+	while (i < str_len)
 	{
-		for (word = s; str[word] != '\0'; word++)
+		if (str[i] != ' ')
 		{
-			if (str[word] == ' ')
-				s++;
-
-			if (str[word] != ' ' && (str[word + 1] == ' ' || str[word + 1] == '\0'))
-			{
-				string[i] = malloc((word - s + 2) * sizeof(char));
-				if (string[i] == NULL)
-				{
-					free_array(string, i);
-					return (NULL);
-				}
-				break;
-			}
+			i = strncat_mod(newstr[j], str, i, str_len);
+			j++, i--;
 		}
-
-		for (j = 0; s <= word; s++, j++)
-			string[i][j] = str[s];
-		string[i][j] = '\0';
+		i++;
 	}
-	string[i] = NULL;
-	return (string);
+	newstr[words + 1] = NULL;
+	return (newstr);
 }
