@@ -1,24 +1,18 @@
-/**
- * @file 0-malloc_checked.c
- * @author Yitagesu K Areda
- * @date 2022-05-06
- * @copyright Copyright (c) 2022
- */
 #include "main.h"
 #include <stdlib.h>
 /**
  * malloc_checked - allocates memory using malloc.
  * @b:number of memory block.
- * Return: on success allocatted memory
+ * Return: on success allocatted memory.
  * on fail normal termination with retir n 98.
  */
 void *malloc_checked(unsigned int b)
 {
-void *mem_alloc = malloc(b);
+	void *mem_alloc = malloc(b);
 
-if (!mem_alloc)
-{
-exit(98);
+	if (!mem_alloc)
+		exit(98);
+
+	return (mem_alloc);
 }
-return (mem_alloc);
-}
+
