@@ -17,10 +17,14 @@ if (n >= strlen(*s2))
 {
 len_s2 = strlen (*s2);
 concat = malloc(sizeof(char) * (len_s1 + len_s2 +1));
+if (!concat)
+return (NULL);
 }
 else 
 {
     concat = malloc(sizeof(char) * (len_s1 +n));
+    if (!concat)
+    return (NULL);
 }
 for (i = 0; i < len_s1;i++)
 {
