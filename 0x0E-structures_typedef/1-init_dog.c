@@ -18,5 +18,3 @@ if (d != NULL)
 	d->owner = owner;
 }
 }
-
-
