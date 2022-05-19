@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdlib.h>
 /**
@@ -25,4 +25,4 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 
-#endif
+#endif /* end of MAIN_H */
