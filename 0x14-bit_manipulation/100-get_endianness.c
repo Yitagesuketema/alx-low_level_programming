@@ -1,8 +1,3 @@
-/*
- * File: 100-get_endianness.c
- * Auth: Brennan D Baraban
- */
-
 #include "holberton.h"
 
 /**
